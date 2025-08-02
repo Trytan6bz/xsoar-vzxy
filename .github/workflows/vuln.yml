@@ -1,0 +1,13 @@
+name: Vulnerable Issue Comment Runner
+
+on:
+  issue_comment:
+    types: [created]
+
+jobs:
+  echo_input:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Unsafe Echo
+        run: |
+          echo "User said: ${{ github.event.comment.body }}"
