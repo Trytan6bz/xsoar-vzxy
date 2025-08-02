@@ -1,13 +1,12 @@
-name: Vulnerable Issue Comment Runner
+name: Comment Listener
 
 on:
   issue_comment:
     types: [created]
 
 jobs:
-  echo_input:
+  debug:
     runs-on: ubuntu-latest
     steps:
-      - name: Unsafe Echo
-        run: |
-          echo "User said: ${{ github.event.comment.body }}"
+      - name: Print comment
+        run: echo "${{ github.event.comment.body }}"
